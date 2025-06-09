@@ -49,7 +49,7 @@ a {
   background: #fffcf4;
 }
 
-.header .fixed {
+.header.fixed {
   position: sticky;
   top: -28px;
   z-index: 1;
