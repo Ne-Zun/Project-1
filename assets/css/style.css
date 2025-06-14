@@ -22,6 +22,19 @@ a {
   text-decoration: none;
 }
 
+.line-clamp {
+  /*bai 67 Text-overflow */
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
+}
 .heading-lv2 {
   color: #171100;
   font-family: var(--font-heading);
@@ -300,9 +313,8 @@ a {
 .popular .course-item {
   border-radius: 12px;
   border: 1px solid #e2dfda;
+  flex: 1;
   background: #fff;
-  width: 370px;
-  height: 466px;s
 }
 .popular .course-item:hover {
   border-radius: 12px;
@@ -368,4 +380,72 @@ a {
 .popular .course-item .btn-book:hover {
   cursor: pointer;
   background-color: var(--primary-color);
+}
+
+/* =============feedback============== */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0px;
+  background: #2e2100;
+}
+.list-feedback {
+  display: flex;
+  overflow: hidden;
+}
+.feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  /* transform: translateX(-100%);
+  transition: all ease 0.5s; */
+}
+
+.feedback-item .avatar {
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+
+.feedback-item .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-size: 2.4rem;
+  line-height: 1.24;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+.feedback-item .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.feedback-item .dots {
+  display: flex;
+  margin-top: 28px;
+  gap: 6px;
+}
+.feedback-item .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback-item .dot.active {
+  background: var(--primary-color);
+}
+
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback-item blockquote {
+  color: #fff;
+  padding-left: 30px;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
 }
